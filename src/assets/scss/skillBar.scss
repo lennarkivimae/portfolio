@@ -1,0 +1,68 @@
+@import './mixins';
+
+.skillBar {
+	position: relative;
+	display: flex;
+	margin: 50px auto;
+	width: 100%;
+	overflow: hidden;
+	transition: 0.3s ease;
+	padding-bottom: 30px;
+	@include mDevice {
+		width: 100%;
+		flex-direction: column;
+	}
+	@include xsDevice {
+		padding-bottom: $footerHeight;
+	}
+	& > .prev-item,
+	.next-item {
+		position: relative;
+		align-self: center;
+		box-sizing: content-box;
+		font-size: $skillBar__prevNextSize;
+		width: $skillBar__prevNextWidth;
+		height: 100%;
+		cursor: pointer;
+		transition: 0.3s ease;
+		&:hover {
+			font-size: $skillBar__prevNextSize--hover;
+			color: $skillBar__prevNextHover;
+		}
+		@include xsDevice {
+			font-size: $skillBar__prevNextSize--m;
+			&:hover {
+				font-size: $skillBar__prevNextSize--m;
+			}
+		}
+	}
+	&__items {
+		position: relative;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		justify-content: space-evenly;
+		scroll-behavior: smooth;
+		width: 80%;
+		margin: 10px auto;
+		@include xsDevice {
+      width: 100%;
+      grid-template-columns: auto auto;
+		}
+	}
+	&__item {
+		position: relative;
+		margin: 10px;
+		transition: .3s ease;
+		@include mDevice {
+			width: $skillBar__iconSizes--m;
+			height: $skillBar__iconSizes--m;
+		}
+		@include xsDevice {
+			width: $skillBar__iconSizes--m;
+			height: $skillBar__iconSizes--m;
+		}
+	}
+	&--active {
+		display: block;
+	}
+}

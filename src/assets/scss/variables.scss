@@ -1,0 +1,39 @@
+/* Breakpoints */
+$xs-width: 576px;
+$s-width: 768px;
+$m-width: 991px;
+$xl-width: 2055px;
+/* Defaults */
+$defaultFont: 'Montserrat', sans-serif;
+$defaultBackground: black;
+$profilePictureBackground: #0B6C9C;
+$iconProtectedArea: 20px;
+$defaultMargin: 30px;
+$footerHeight: 80px;
+/* NavBar Component */
+$navItemColor: white;
+$navItemColor--hover: #4CC6E2;
+$navFontSize: 18px;
+
+/* sectionContent component */
+$section__Background: #4CC6E2;
+$section__Height: 656px;
+$section__Height--m: 900px;
+$section__Height--xs: 100%;
+$section__Heading: 36px;
+$section__routerLinkColor: #0B6C9C;
+$section__itemColor: white;
+$section__itemColor--mod: black;
+$section__itemSize: 36px;
+$section__itemSize--m: 26px;
+$section__itemSize--xs: 16px;
+$section__headingPadding: 50px;
+
+/* SkillBar Component */
+$skillBar__prevNextHover: #0B6C9C;
+$skillBar__prevNextSize: 48px;
+$skillBar__prevNextSize--hover: 72px;
+$skillBar__prevNextWidth: 50px;
+$skillBar__prevNextSize--m: 52px;
+$skillBar__iconSizes--m: 80px;
+$skillBar__iconSizes--xs: 40px;

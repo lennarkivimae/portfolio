@@ -1,0 +1,90 @@
+@import "mixins";
+
+.sectionContent {
+	position: relative;
+	margin-left: auto;
+	width: 100%;
+	min-height: $section__Height;
+	background: $section__Background;
+	transition: .3s ease;
+	margin-bottom: $footerHeight;
+	&__heading {
+		position: relative;
+		padding-top: $section__headingPadding;
+		font-size: $section__Heading;
+	}
+	&__content {
+		position: relative;
+		display: inline-block;
+		padding: $defaultMargin 0;
+		line-height: 1.5;
+		font-size: 28px;
+		height: 100%;
+	}
+	&__routerLink {
+		position: relative;
+		text-decoration: none;
+		color: white;
+		font-weight: 700;
+		transition: 0.3s ease;
+		&:hover {
+			color: $section__routerLinkColor;
+		}
+	}
+	&__items {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		/* transform: translate(-50%, -50%); */
+		& > div {
+			display: flex;
+			padding-top: $defaultMargin;
+			padding-bottom: $defaultMargin;
+			height: 100%;
+			width: 100%;
+			justify-content: center;
+		}
+		@include xsDevice {
+			position: relative;
+			padding: 50px 0;
+			flex-wrap: nowrap;
+			margin: 0 auto;
+			width: 100%;
+			top: 0;
+			left: 0;
+			transform: translate(0, 0);
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		font-size: $section__itemSize;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $section__itemColor;
+		@include mDevice {
+			font-size: $section__itemSize--m;
+		}
+		@include xsDevice {
+			font-size: $section__itemSize--xs;
+		}
+	}
+	&__item--mod {
+		position: relative;
+		margin-left: 40px;
+		font-weight: normal;
+		color: $section__itemColor--mod;
+		line-height: 1.5;
+	}
+	@include mDevice {
+		width: 100%;
+		min-height: $section__Height--m;
+	}
+	@include xsDevice {
+		min-height: $section__Height--xs;
+	}
+}

@@ -1,0 +1,34 @@
+@import "mixins";
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+  justify-content: space-evenly;
+  background: #000;
+  transition: 0.3s ease;
+  z-index: 2;
+  &__logo {
+    position: relative;
+    & > img {
+      position: relative;
+      width: 69px;
+      height: 69px;
+      transform: rotate(90deg);
+      margin: $iconProtectedArea;
+
+      @include xlDevice {
+        width: 102px;
+        height: 102px;
+      }
+    }
+  }
+  @include mDevice {
+    width: 100%;
+  }
+  @include xsDevice {
+    display: none;
+  }
+}

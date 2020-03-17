@@ -1,0 +1,31 @@
+@import "mixins";
+
+.navbar {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  &__items {
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  &__item {
+    position: relative;
+    align-self: center;
+    display: block;
+    height: 100%;
+    color: $navItemColor;
+    font-size: $navFontSize;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+    &:hover {
+      color: $navItemColor--hover;
+    }
+    @include xlDevice {
+      font-size: 28px;
+    }
+  }
+}

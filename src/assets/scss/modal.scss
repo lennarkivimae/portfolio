@@ -1,0 +1,55 @@
+@import './mixins';
+
+.modal {
+	transition: .3s ease;
+	&__window {
+		position: fixed;
+		overflow: hidden;
+		color: white;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: $section__Background;
+		padding: 30px;
+		z-index: 4;
+		width: 1200px;
+		height: 645px;
+		border-radius: 15px;
+		@include mDevice {
+			width: 100%;
+			height: 100%;
+			margin-top: $defaultMargin;
+		}
+	}
+	&__header {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		& > h3 {
+			position: relative;
+			font-size: 36px;
+		}
+		& > i {
+			position: relative;
+			transition: .3s ease;
+			&:hover {
+				color: $skillBar__prevNextHover;
+			}
+		}
+	}
+	&__body {
+		position: relative;
+		padding-top: $defaultMargin;
+	}
+}
+
+.overlay {
+	position: fixed;
+	pointer-events: all;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.404);
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}

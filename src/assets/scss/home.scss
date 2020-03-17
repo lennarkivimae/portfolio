@@ -1,0 +1,69 @@
+@import "mixins";
+
+.home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include mDevice {
+    overflow: auto;
+  }
+  @include xsDevice {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #4CC6E2;
+  width: 50%;
+  min-height: 500px;
+  margin-top: 3%;
+  transition: 0.3s ease;
+  padding: 0 20px;
+  &__heading {
+    position: relative;
+    font-weight: 700;
+    font-size: 82px;
+    text-align: center;
+    @include xsDevice {
+      padding-bottom: $defaultMargin;
+      font-size: 64px;
+    }
+    @include xlDevice {
+      font-size: 92px;
+    }
+    @include mDevice {
+      text-align: center;
+    }
+  }
+  &__desc {
+    position: relative;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    @include xsDevice {
+      font-size: 16px;
+      text-align: center;
+    }
+    @include xlDevice {
+      font-size: 28px;
+    }
+  }
+  @include mDevice {
+    width: 100%;
+    padding: 0;
+  }
+  @include xsDevice {
+    height: 600px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  @include xlDevice {
+    height: 700px;
+    margin-top: 8%;
+  }
+}

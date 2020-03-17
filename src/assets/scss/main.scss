@@ -1,0 +1,68 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+/* Variables */
+@import './variables';
+
+/* Header and footer */
+@import './header';
+@import './footer';
+
+/* Components */
+@import './navBar';
+@import './sectionContent';
+@import './skillBar';
+@import './modal';
+
+/* Views */
+@import './home';
+
+/* Mixins / Functions */
+@import './mixins';
+
+@import './profilePicture';
+
+* {
+	font-family: $defaultFont;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: $defaultBackground;
+	height: 100vh;
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.h-100-xs {
+	@include xsDevice {
+		height: 100%;
+	}
+}
+
+/* Router style modifier */
+.router-link-exact-active {
+	font-size: $section__Heading;
+	color: $navItemColor--hover;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition-property: opacity;
+	transition-duration: .25s;
+}
+
+.fade-enter-active {
+	transition-delay: .25s;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
+	height: 0;
+}

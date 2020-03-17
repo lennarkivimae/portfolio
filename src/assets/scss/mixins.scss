@@ -1,0 +1,20 @@
+@mixin xsDevice {
+  @media (max-width: #{$xs-width}) {
+    @content;
+  }
+}
+@mixin sDevice {
+  @media (max-width: #{$s-width}) {
+    @content;
+  }
+}
+@mixin mDevice {
+  @media (max-width: #{$m-width}) {
+    @content;
+  }
+}
+@mixin xlDevice {
+  @media (min-width: #{$xl-width}) {
+    @content;
+  }
+}
